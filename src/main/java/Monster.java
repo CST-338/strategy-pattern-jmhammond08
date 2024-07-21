@@ -8,7 +8,7 @@ public class Monster {
     private Integer maxHP;
     private HashMap<String, Integer> items;
 
-    public Monster(Integer xp, HashMap<String, Integer> items, Integer maxHP) {
+    public Monster(Integer maxHP, Integer xp, HashMap<String, Integer> items) {
         this.xp = xp;
         this.items = items;
         this.maxHP = maxHP;
@@ -54,6 +54,6 @@ public class Monster {
 
     @Override
     public String toString() {
-        return hp + "/" + maxHP ;
+        return "hp=" + hp + "/" + maxHP ;
     }
 }
