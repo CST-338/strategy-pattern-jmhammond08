@@ -1,6 +1,15 @@
 import java.util.HashMap;
 import java.util.Objects;
 
+/**
+ * Represents a Monster with health points (hp), experience points (xp),
+ * maximum health points (maxHP), and items it possesses.
+ *
+ * @author Jess Hammond
+ * @version 1.0
+ * GitHub Repo: https://github.com/CST-338/strategy-pattern-jmhammond08
+ */
+
 public class Monster {
 
     private Integer hp;
@@ -15,6 +24,7 @@ public class Monster {
         hp = this.maxHP;
     }
 
+    //Gets and Sets HP
     public Integer getHp() {
         return hp;
     }
@@ -23,6 +33,7 @@ public class Monster {
         this.hp = hp;
     }
 
+    //Gets and Sets Items
     public HashMap<String, Integer> getItems() {
         return items;
     }
@@ -31,10 +42,12 @@ public class Monster {
         this.items = items;
     }
 
+    //Gets XP
     public Integer getXp() {
         return xp;
     }
 
+    //Gets Max HP
     public Integer getMaxHP() {
         return maxHP;
     }
@@ -52,6 +65,7 @@ public class Monster {
         return Objects.hash(getHp(), getXp(), getMaxHP(), getItems());
     }
 
+    //Displays the current health of the monster
     @Override
     public String toString() {
         return "hp=" + hp + "/" + maxHP ;

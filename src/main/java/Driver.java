@@ -2,6 +2,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Driver class to demonstrate the usage of Monster subclasses such as Imp and Kobold.
+ * Creates instances of monsters, adds them to a list, and prints their string representation.
+ *
+ * @author Jess Hammond
+ * @version 1.0
+ * GitHub Repo: https://github.com/CST-338/strategy-pattern-jmhammond08
+ */
+
 public class Driver {
     public static void main(String[] args) {
         HashMap<String, Integer> items = new HashMap<>();
