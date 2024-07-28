@@ -11,7 +11,7 @@ import java.util.Random;
  * maximum health points (maxHP), and items it possesses.
  *
  * @author Jess Hammond
- * @version 1.0
+ * @version 1.1
  * GitHub Repo: https://github.com/CST-338/strategy-pattern-jmhammond08
  */
 
@@ -21,12 +21,11 @@ public class Monster {
     private Integer xp = 10;
     private Integer maxHP;
     private HashMap<String, Integer> items;
-    private Attack attackType;
 
     Integer agility = 10;
     Integer defense = 10;
     Integer strength = 10;
-    Integer attack;
+    Attack attack;
 
 
     public Monster(Integer maxHP, Integer xp, HashMap<String, Integer> items) {
@@ -34,7 +33,7 @@ public class Monster {
         this.items = items;
         this.maxHP = maxHP;
         hp = this.maxHP;
-        this.attackType = attackType;
+        this.attack = attack;
     }
 
     //Gets agility
@@ -125,7 +124,7 @@ public class Monster {
     }
 
     boolean attackTarget(Monster target) {
-        Integer damage = attackType.attack(target);
+        Integer damage = attack.attack(target);
         return target.takeDamage(damage);
     }
 }

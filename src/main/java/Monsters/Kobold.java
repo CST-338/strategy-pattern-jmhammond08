@@ -10,7 +10,7 @@ import java.util.HashMap;
  * Inherits behavior and properties from the Monster class.
  *
  * @author Jess Hammond
- * @version 1.0
+ * @version 1.1
  * GitHub Repo: https://github.com/CST-338/strategy-pattern-jmhammond08
  */
 
@@ -21,13 +21,13 @@ public class Kobold extends Monster{
         Integer maxStr = 15;
         Integer maxDef = 6;
         Integer maxAgi = 3;
+
+        attack = new MeleeAttack(this);
+
+        strength = super.getAttribute(strength, maxStr);
+        defense = super.getAttribute(defense, maxDef);
+        agility = super.getAttribute(agility, maxAgi);
     }
-
-    attack = new MeleeAttack(this);
-
-    str = super.getAttribute(str, maxStr);
-    def = super.getAttribute(def, maxDef);
-    agi = super.getAttribute(agi, maxAgi);
 
     @Override
     public String toString() {
