@@ -114,16 +114,17 @@ public class Monster {
             System.out.println("The creature was hit for " + damage + " damage.");
         }
 
-        System.out.println(this.toString());
-
         if(hp<=0){
+            hp = 0;
             System.out.println("Oh no! The creature has perished.");
+            System.out.println(this.toString());
             return false;
         }
+        System.out.println(this.toString());
         return true;
     }
 
-    boolean attackTarget(Monster target) {
+    public boolean attackTarget(Monster target) {
         Integer damage = attack.attack(target);
         return target.takeDamage(damage);
     }

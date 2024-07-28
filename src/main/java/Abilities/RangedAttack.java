@@ -13,7 +13,7 @@ import java.util.Random;
  * GitHub Repo: https://github.com/CST-338/strategy-pattern-jmhammond08
  */
 
- class RangedAttack implements Attack{
+public class RangedAttack implements Attack{
 
     Monster attacker;
 

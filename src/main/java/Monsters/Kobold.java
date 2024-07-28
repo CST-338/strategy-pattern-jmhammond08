@@ -1,6 +1,6 @@
 package Monsters;
 
-import Abilities.MeleeAttack;
+import Abilities.RangedAttack;
 
 import java.util.HashMap;
 
@@ -22,7 +22,7 @@ public class Kobold extends Monster{
         Integer maxDef = 6;
         Integer maxAgi = 3;
 
-        attack = new MeleeAttack(this);
+        attack = new RangedAttack(this);
 
         strength = super.getAttribute(strength, maxStr);
         defense = super.getAttribute(defense, maxDef);
