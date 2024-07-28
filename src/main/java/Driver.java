@@ -11,7 +11,7 @@ import java.util.List;
  * Creates instances of monsters, adds them to a list, and prints their string representation.
  *
  * @author Jess Hammond
- * @version 1.0
+ * @version 1.1
  * GitHub Repo: https://github.com/CST-338/strategy-pattern-jmhammond08
  */
 
