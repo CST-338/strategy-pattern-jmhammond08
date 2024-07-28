@@ -1,5 +1,7 @@
 package Monsters;
 
+import Abilities.Attack;
+
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.Random;
@@ -19,6 +21,7 @@ public class Monster {
     private Integer xp = 10;
     private Integer maxHP;
     private HashMap<String, Integer> items;
+    private Attack attackType;
 
     Integer agility = 10;
     Integer defense = 10;
@@ -31,6 +34,7 @@ public class Monster {
         this.items = items;
         this.maxHP = maxHP;
         hp = this.maxHP;
+        this.attackType = attackType;
     }
 
     //Gets agility
@@ -120,5 +124,8 @@ public class Monster {
         return true;
     }
 
-
+    boolean attackTarget(Monster target) {
+        Integer damage = attackType.attack(target);
+        return target.takeDamage(damage);
+    }
 }

@@ -1,5 +1,9 @@
 package Abilities;
 
+import Monsters.Monster;
+
+import java.util.Random;
+
 /**
  * The RangedAttack class implements the Attack interface to represent a ranged attack action
  * performed by a Monster.
@@ -19,8 +23,9 @@ package Abilities;
 
     @Override
     public Integer attack(Monster target) {
+        int damage = new Random().nextInt(10) + 1;
         String message = attacker + " uses a melee attack on " + target;
         System.out.println(message);
-        return null;
+        return damage;
     }
 }
