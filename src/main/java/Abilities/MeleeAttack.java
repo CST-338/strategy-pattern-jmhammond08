@@ -1,3 +1,5 @@
+package Abilities;
+
 /**
  * The MeleeAttack class implements the Attack interface to represent a melee attack action
  * performed by a Monster.

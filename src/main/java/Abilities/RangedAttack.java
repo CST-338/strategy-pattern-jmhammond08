@@ -1,3 +1,5 @@
+package Abilities;
+
 /**
  * The RangedAttack class implements the Attack interface to represent a ranged attack action
  * performed by a Monster.

@@ -1,5 +1,8 @@
+package Monsters;
+
 import java.util.HashMap;
 import java.util.Objects;
+import java.util.Random;
 
 /**
  * Represents a Monster with health points (hp), experience points (xp),
@@ -17,11 +20,32 @@ public class Monster {
     private Integer maxHP;
     private HashMap<String, Integer> items;
 
+    Integer agility = 10;
+    Integer defense = 10;
+    Integer strength = 10;
+    Integer attack;
+
+
     public Monster(Integer maxHP, Integer xp, HashMap<String, Integer> items) {
         this.xp = xp;
         this.items = items;
         this.maxHP = maxHP;
         hp = this.maxHP;
+    }
+
+    //Gets agility
+    public Integer getAgility() {
+        return agility;
+    }
+
+    //Gets defense
+    public Integer getDefense() {
+        return defense;
+    }
+
+    //Gets strength
+    public Integer getStrength() {
+        return strength;
     }
 
     //Gets and Sets HP
@@ -70,4 +94,31 @@ public class Monster {
     public String toString() {
         return "hp=" + hp + "/" + maxHP ;
     }
+
+    Integer getAttribute(Integer min, Integer max) {
+       Random rand = new Random();
+       if(min>max){
+           Integer temp = min;
+           min = max;
+           max = temp;
+       }
+       return rand.nextInt(max - min) + min;
+    }
+
+    boolean takeDamage(Integer damage) {
+        if(damage>0){
+            hp -= damage;
+            System.out.println("The creature was hit for " + damage + " damage.");
+        }
+
+        System.out.println(this.toString());
+
+        if(hp<=0){
+            System.out.println("Oh no! The creature has perished.");
+            return false;
+        }
+        return true;
+    }
+
+
 }

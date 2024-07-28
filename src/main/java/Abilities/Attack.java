@@ -1,3 +1,5 @@
+package Abilities;
+
 /**
  * The Attack interface extends the Ability interface and represents an ability to attack.
  * Classes implementing this interface should provide concrete implementations for attacking a target.

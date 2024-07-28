@@ -1,3 +1,5 @@
+package Abilities;
+
 /**
  * The Ability interface represents a generic ability that can be possessed by monsters.
  *
