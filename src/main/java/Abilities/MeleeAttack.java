@@ -23,9 +23,8 @@ public class MeleeAttack implements Attack {
 
     @Override
     public Integer attack(Monster target) {
-        int damage = new Random().nextInt(10) + 1;
         String message = attacker + " uses a melee attack on " + target;
         System.out.println(message);
-        return damage;
+        return attacker.getStr() - target.getDef();
     }
 }

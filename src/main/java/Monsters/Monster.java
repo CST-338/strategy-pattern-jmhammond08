@@ -38,17 +38,17 @@ public class Monster {
     }
 
     //Gets agility
-    public Integer getAgility() {
+    public Integer getAgi() {
         return agility;
     }
 
     //Gets defense
-    public Integer getDefense() {
+    public Integer getDef() {
         return defense;
     }
 
     //Gets strength
-    public Integer getStrength() {
+    public Integer getStr() {
         return strength;
     }
 

@@ -23,9 +23,8 @@ import java.util.Random;
 
     @Override
     public Integer attack(Monster target) {
-        int damage = new Random().nextInt(10) + 1;
-        String message = attacker + " uses a melee attack on " + target;
+        String message = attacker + " uses a ranged attack on " + target;
         System.out.println(message);
-        return damage;
+        return attacker.getAgi() - target.getAgi();
     }
 }
