@@ -108,7 +108,7 @@ public class Monster {
        return rand.nextInt(max - min) + min;
     }
 
-    boolean takeDamage(Integer damage) {
+    public boolean takeDamage(Integer damage) {
         if(damage>0){
             hp -= damage;
             System.out.println("The creature was hit for " + damage + " damage.");
@@ -124,8 +124,11 @@ public class Monster {
         return true;
     }
 
-    public boolean attackTarget(Monster target) {
+    public Integer attackTarget(Monster target) {
         Integer damage = attack.attack(target);
-        return target.takeDamage(damage);
+        if (target.takeDamage(damage)) {
+            return 0;
+        }
+        else return 1;
     }
 }
