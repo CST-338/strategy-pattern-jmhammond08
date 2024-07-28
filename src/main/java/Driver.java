@@ -31,6 +31,5 @@ public class Driver {
             System.out.println(monsters.get(0).attackTarget(monsters.get(1)));
             System.out.println(monsters.get(1).attackTarget(monsters.get(0)));
         }
-
     }
 }
