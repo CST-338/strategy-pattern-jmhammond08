@@ -126,9 +126,9 @@ public class Monster {
 
     public Integer attackTarget(Monster target) {
         Integer damage = attack.attack(target);
-        if (target.takeDamage(damage)) {
-            return 0;
+        if(!target.takeDamage(damage)){
+            return 1;
         }
-        else return 1;
+        else return 0;
     }
 }
